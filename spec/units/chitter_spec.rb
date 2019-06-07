@@ -14,12 +14,13 @@ describe Chitter do
      end
   end
 
-  # describe '#create' do
-  #
-  #    it 'adds peeps to the database' do
-  #      Chitter.create(name: 'user1', message: 'loooves tea')
-  #      expect(chitter.first.message).to eq('loooves tea')
-  #    end
-  # end
+
+  describe '#create' do
+
+     it 'adds peeps to the database' do
+       chitter = Chitter.create(name: 'user1', message: 'loooves tea')
+       expect(Chitter.all.first.message).to eq('loooves tea')
+     end
+  end
 
 end

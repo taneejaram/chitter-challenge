@@ -10,6 +10,7 @@ class ChitterApp < Sinatra::Base
 
   post '/written-peep' do
     @name = params[:name]
+    Chitter.create(name: params['name'], message: params['message'])
     erb :peep
   end
 

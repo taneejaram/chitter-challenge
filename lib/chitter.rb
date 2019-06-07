@@ -21,5 +21,14 @@ class Chitter
   end
 
 
+  def self.create(name: name, message: message)
+    if ENV['ENVIRONMENT'] = 'test'
+      connection = PG.connect(dbname: 'chitter_manager_test')
+    else
+      connection = PG.connect(dbname: 'chitter_manager')
+    end
+
+    connection.exec("INSERT INTO chitter (name, message) VALUES ('#{name}', '#{message}')")
+  end
 
 end
