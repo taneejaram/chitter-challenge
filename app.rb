@@ -9,9 +9,9 @@ class ChitterApp < Sinatra::Base
   end
 
   post '/written-peep' do
-    @name = params[:name]
     Chitter.create(name: params['name'], message: params['message'])
     erb :peep
+    redirect '/'
   end
 
 end
