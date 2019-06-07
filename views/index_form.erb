@@ -1,0 +1,14 @@
+<h1>Chitter</h1>
+
+<form action="/written-peep" method="post">
+  Name:
+  <input type="text" name="name"><br>
+  <br>
+  My Post:<br>
+  <textarea name="message" style="width:400px; height:60px;">Write your message here.</textarea>
+  <br><br>
+  <input type="submit" value="Post">
+</form>
+
+Peeps:<br><br>
+<%= @peeps.each do |item| item end %>
