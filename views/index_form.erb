@@ -1,6 +1,8 @@
 <html>
 <head>
 <style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 div {
   background-color: aliceblue;
   width: 370px;
@@ -19,10 +21,15 @@ div {
   <br>
   My Post:<br>
   <textarea name="message" style="width:400px; height:60px;">Write your message here.</textarea>
+  <div class="form-group row">
+    <label for="example-datetime-local-input" class="col-2 col-form-label">Date and time:</label>
+    <div class="col-10">
+      <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+    </div>
+  </div>
   <br><br>
   <input type="submit" value="Post">
 </form>
-
 
 <div>
 Peeps:<br><br>

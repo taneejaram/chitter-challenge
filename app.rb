@@ -4,6 +4,10 @@ require './lib/chitter'
 class ChitterApp < Sinatra::Base
 
   get '/' do
+    erb :login_form
+  end
+
+  post '/home' do
     @peeps = Chitter.all
     erb :index_form
   end
