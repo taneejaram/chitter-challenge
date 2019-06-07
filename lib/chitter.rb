@@ -8,7 +8,6 @@ class Chitter
     @message = message
   end
 
-
   def self.all
     if ENV['ENVIRONMENT'] = 'test'
       connection = PG.connect(dbname: 'chitter_manager_test')
@@ -20,6 +19,9 @@ class Chitter
     result.map { |peep| Chitter.new(peep['name'], peep['message'])}
   end
 
+  def to_s
+    "#{@name}: #{@message}"
+  end
 
   def self.create(name: name, message: message)
     if ENV['ENVIRONMENT'] = 'test'

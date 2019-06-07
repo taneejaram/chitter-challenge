@@ -1,3 +1,17 @@
+<html>
+<head>
+<style>
+div {
+  background-color: aliceblue;
+  width: 400px;
+  border: 5px solid lightblue;
+  padding: 10px;
+  margin: 5px;
+}
+</style>
+</head>
+<body>
+
 <h1>Chitter</h1>
 
 <form action="/written-peep" method="post">
@@ -10,5 +24,13 @@
   <input type="submit" value="Post">
 </form>
 
+
+<div>
 Peeps:<br><br>
-<%= @peeps.each do |item| item end %>
+
+<% @peeps.each do |item| %>
+<%=item%><br>
+<% end %></div>
+
+</body>
+</html>
