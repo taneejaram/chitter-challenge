@@ -22,9 +22,9 @@ div {
   My Post:<br>
   <textarea name="message" style="width:400px; height:60px;">Write your message here.</textarea>
   <div class="form-group row">
-    <label for="example-datetime-local-input" class="col-2 col-form-label">Date and time:</label>
+    <label for="example-date-input" class="col-2 col-form-label">Date</label>
     <div class="col-10">
-      <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+      <input class="form-control" type="date" name="date">
     </div>
   </div>
   <br><br>
@@ -32,11 +32,11 @@ div {
 </form>
 
 <div>
-Peeps:<br><br>
-
+<h3><u>Peeps</u></h3>
 <% @peeps.each do |item| %>
 <%=item%><br>
-<% end %></div>
+<% end %>
+</div>
 
 </body>
 </html>

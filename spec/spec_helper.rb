@@ -7,6 +7,12 @@ require 'setup_test_database'
 
 ENV['ENVIRONMENT'] = 'test'
 
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
+
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
   # Want a nice code coverage website? Uncomment this next line!
@@ -14,11 +20,6 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 ])
 SimpleCov.start
 
-RSpec.configure do |config|
-  config.before(:each) do
-    setup_test_database
-  end
-end
 
 RSpec.configure do |config|
   config.after(:suite) do

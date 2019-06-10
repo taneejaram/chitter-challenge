@@ -7,7 +7,7 @@ feature 'Testing infrastructure' do
 
 end
 
-feature '"Write a new peep" link' do
+feature '"Write a new Peep" link' do
 
   scenario 'Enables user to enter their name and message and return to home page' do
     visit ('/home')
@@ -15,7 +15,7 @@ feature '"Write a new peep" link' do
     fill_in :message, with: 'loves tea'
     click_on 'Post'
 
-    expect(page).to have_content('Chitter')
+    expect(page).to have_content('user1: loves tea')
   end
 end
 

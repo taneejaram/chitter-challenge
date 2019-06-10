@@ -18,8 +18,13 @@ describe Chitter do
   describe '#create' do
 
      it 'adds peeps to the database' do
-       chitter = Chitter.create(name: 'user1', message: 'loooves tea')
+       chitter = Chitter.create(name: 'user1', message: 'loooves tea', date: '2019-05-12')
        expect(Chitter.all.first.message).to eq('loooves tea')
+     end
+
+     it 'adds the date that a Peep was posted' do
+       chitter = Chitter.create(name: 'user1', message: 'loooves tea', date: '2019-05-12')
+       expect(Chitter.all.first.date).to eq('2019-05-12')
      end
   end
 
