@@ -50,4 +50,6 @@ end
 
 Here this uses the Chitter.create method to interact with the database table.
 
-Next I added the end-point '/logged-in' which contains a form to allow users to log-in. My next step would be to save the username and password variables in another database table.
+Next I added the end-point '/logged-in' which contains a form to allow users to log-in.
+
+My next step would be to save the username and password variables in another database table. And to display posts in reverse chronological order.
